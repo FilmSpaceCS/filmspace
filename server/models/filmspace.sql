@@ -1,20 +1,20 @@
 DROP TABLE IF EXISTS users; 
 CREATE TABLE users (
   _id SERIAL PRIMARY KEY ,
-  username varchar NOT NULL ,
+  username varchar NOT NULL UNIQUE ,
   password varchar NOT NULL
 );
 
 DROP TABLE IF EXISTS show;
 CREATE TABLE show (
   _id SERIAL PRIMARY KEY ,
-  title varchar NOT NULL
+  title varchar NOT NULL UNIQUE
 );
 
 DROP TABLE IF EXISTS service;
 CREATE TABLE service (
     _id SERIAL PRIMARY KEY ,
-    name varchar NOT NULL
+    name varchar NOT NULL UNIQUE
 );
 
 DROP TABLE IF EXISTS join_service;
