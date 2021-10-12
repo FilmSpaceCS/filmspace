@@ -1,0 +1,219 @@
+{
+    "variant": "rapidapi_basic",
+    "results": [
+        {
+            "locations": [
+                {
+                    "display_name": "iTunes",
+                    "id": "5d8415b3ca549f00528a99f0",
+                    "url": "https://itunes.apple.com/gb/tv-season/the-one-with-phoebes-wedding/id315709066?ct=app_tv&i=315881849",
+                    "name": "iTunesIVAGB",
+                    "icon": "https://utellyassets7.imgix.net/locations_icons/utelly/black_new/iTunesIVAGB.png?w=92&auto=compress&app_version=9b01e497-d87f-4baa-827d-15d07b444af4_1e1212w2021-10-11"
+                },
+                {
+                    "display_name": "Google Play",
+                    "id": "5d84d6dcd95dc7385f6a43e1",
+                    "url": "https://play.google.com/store/tv/show?amp=&amp=&cdid=tvseason-S1A1DwZZY0M&gdid=tvepisode-vdMvcnCQ23U&gl=GB&hl=en&id=5H6qro0VLWw",
+                    "name": "GooglePlayIVAGB",
+                    "icon": "https://utellyassets7.imgix.net/locations_icons/utelly/black_new/GooglePlayIVAGB.png?w=92&auto=compress&app_version=9b01e497-d87f-4baa-827d-15d07b444af4_1e1212w2021-10-11"
+                },
+                {
+                    "display_name": "Amazon Instant Video",
+                    "id": "5d8415b31e1521005490e1bc",
+                    "url": "https://watch.amazon.co.uk/detail?asin=B00G0MJP1M&tag=utellycom00-21",
+                    "name": "AmazonInstantVideoIVAGB",
+                    "icon": "https://utellyassets7.imgix.net/locations_icons/utelly/black_new/AmazonInstantVideoIVAGB.png?w=92&auto=compress&app_version=9b01e497-d87f-4baa-827d-15d07b444af4_1e1212w2021-10-11"
+                },
+                {
+                    "display_name": "Netflix",
+                    "id": "5d84d6e2d95dc7385f6a442d",
+                    "url": "https://www.netflix.com/title/70274226",
+                    "name": "NetflixIVAGB",
+                    "icon": "https://utellyassets7.imgix.net/locations_icons/utelly/black_new/NetflixIVAGB.png?w=92&auto=compress&app_version=9b01e497-d87f-4baa-827d-15d07b444af4_1e1212w2021-10-11"
+                }
+            ],
+            "weight": 9983,
+            "id": "5d9140f8302b840050ad0406",
+            "external_ids": {
+                "imdb": {
+                    "url": "https://www.imdb.com/title/tt0108778",
+                    "id": "tt0108778"
+                },
+                "tmdb": {
+                    "url": "https://www.themoviedb.org/tv/1668",
+                    "id": "1668"
+                },
+                "iva": {
+                    "id": "55503"
+                },
+                "facebook": null,
+                "rotten_tomatoes": null,
+                "wiki_data": {
+                    "url": "https://www.wikidata.org/wiki/Q79784",
+                    "id": "Q79784"
+                },
+                "iva_rating": null,
+                "gracenote": null
+            },
+            "picture": "https://utellyassets9-4.imgix.net/api/Images/88ae96c1ebbb831579a5e2045f463a73/Redirect?fit=crop&auto=compress&crop=faces,top",
+            "provider": "iva",
+            "name": "Friends"
+        },
+        {
+            "locations": [
+                {
+                    "display_name": "iTunes",
+                    "id": "5d8415b3ca549f00528a99f0",
+                    "url": "https://itunes.apple.com/gb/tv-season/bill-or-ben/id1098221755?ct=app_tv&i=1123946234",
+                    "name": "iTunesIVAGB",
+                    "icon": "https://utellyassets7.imgix.net/locations_icons/utelly/black_new/iTunesIVAGB.png?w=92&auto=compress&app_version=9b01e497-d87f-4baa-827d-15d07b444af4_1e1212w2021-10-11"
+                },
+                {
+                    "display_name": "Amazon Instant Video",
+                    "id": "5d8415b31e1521005490e1bc",
+                    "url": "https://watch.amazon.co.uk/detail?asin=B01IDYQS7I&tag=utellycom00-21",
+                    "name": "AmazonInstantVideoIVAGB",
+                    "icon": "https://utellyassets7.imgix.net/locations_icons/utelly/black_new/AmazonInstantVideoIVAGB.png?w=92&auto=compress&app_version=9b01e497-d87f-4baa-827d-15d07b444af4_1e1212w2021-10-11"
+                },
+                {
+                    "display_name": "Google Play",
+                    "id": "5d84d6dcd95dc7385f6a43e1",
+                    "url": "https://play.google.com/store/tv/show?amp=&amp=&cdid=tvseason-nzL7fxbDaryawb5ReSWRNQ&gdid=tvepisode-UH0jSQNwK44&gl=GB&hl=en&id=pvWIuXPG1Klh4aGMJkkd6g",
+                    "name": "GooglePlayIVAGB",
+                    "icon": "https://utellyassets7.imgix.net/locations_icons/utelly/black_new/GooglePlayIVAGB.png?w=92&auto=compress&app_version=9b01e497-d87f-4baa-827d-15d07b444af4_1e1212w2021-10-11"
+                },
+                {
+                    "display_name": "Amazon Prime Video",
+                    "id": "5d84d6ddd95dc7385f6a43e5",
+                    "url": "https://watch.amazon.co.uk/detail?asin=B08YJKQG2S&tag=utellycom00-21",
+                    "name": "AmazonPrimeVideoIVAGB",
+                    "icon": "https://utellyassets7.imgix.net/locations_icons/utelly/black_new/AmazonPrimeVideoIVAGB.png?w=92&auto=compress&app_version=9b01e497-d87f-4baa-827d-15d07b444af4_1e1212w2021-10-11"
+                },
+                {
+                    "display_name": "Netflix",
+                    "id": "5d84d6e2d95dc7385f6a442d",
+                    "url": "https://www.netflix.com/title/81261898",
+                    "name": "NetflixIVAGB",
+                    "icon": "https://utellyassets7.imgix.net/locations_icons/utelly/black_new/NetflixIVAGB.png?w=92&auto=compress&app_version=9b01e497-d87f-4baa-827d-15d07b444af4_1e1212w2021-10-11"
+                }
+            ],
+            "weight": 8956,
+            "id": "5d97daf99a76a40056de749b",
+            "external_ids": {
+                "imdb": {
+                    "url": "https://www.imdb.com/title/tt0086815",
+                    "id": "tt0086815"
+                },
+                "tmdb": {
+                    "url": "https://www.themoviedb.org/tv/2304",
+                    "id": "2304"
+                },
+                "iva": {
+                    "id": "171795"
+                },
+                "facebook": null,
+                "rotten_tomatoes": null,
+                "wiki_data": {
+                    "url": "https://www.wikidata.org/wiki/Q501663",
+                    "id": "Q501663"
+                },
+                "iva_rating": null,
+                "gracenote": null
+            },
+            "picture": "https://utellyassets9-4.imgix.net/api/Images/f6d863bd7925ba507a29e1f448a572e8/Redirect?fit=crop&auto=compress&crop=faces,top",
+            "provider": "iva",
+            "name": "Thomas and Friends"
+        },
+        {
+            "locations": [
+                {
+                    "display_name": "Amazon Instant Video",
+                    "id": "5d8415b31e1521005490e1bc",
+                    "url": "https://watch.amazon.co.uk/detail?asin=B078TR5H5B&tag=utellycom00-21",
+                    "name": "AmazonInstantVideoIVAGB",
+                    "icon": "https://utellyassets7.imgix.net/locations_icons/utelly/black_new/AmazonInstantVideoIVAGB.png?w=92&auto=compress&app_version=9b01e497-d87f-4baa-827d-15d07b444af4_1e1212w2021-10-11"
+                },
+                {
+                    "display_name": "Netflix",
+                    "id": "5d84d6e2d95dc7385f6a442d",
+                    "url": "https://www.netflix.com/title/70298808",
+                    "name": "NetflixIVAGB",
+                    "icon": "https://utellyassets7.imgix.net/locations_icons/utelly/black_new/NetflixIVAGB.png?w=92&auto=compress&app_version=9b01e497-d87f-4baa-827d-15d07b444af4_1e1212w2021-10-11"
+                }
+            ],
+            "weight": 8815,
+            "id": "5d97d9f09a76a40056de0a34",
+            "external_ids": {
+                "imdb": {
+                    "url": "https://www.imdb.com/title/tt1751105",
+                    "id": "tt1751105"
+                },
+                "tmdb": {
+                    "url": "https://www.themoviedb.org/tv/33765",
+                    "id": "33765"
+                },
+                "iva": {
+                    "id": "196914"
+                },
+                "facebook": null,
+                "rotten_tomatoes": null,
+                "wiki_data": {
+                    "url": "https://www.wikidata.org/wiki/Q5415",
+                    "id": "Q5415"
+                },
+                "iva_rating": null,
+                "gracenote": null
+            },
+            "picture": "https://utellyassets9-4.imgix.net/api/Images/ae3d5b3d24f914b70169812706d04d69/Redirect?fit=crop&auto=compress&crop=faces,top",
+            "provider": "iva",
+            "name": "My Little Pony: Friendship Is Magic"
+        },
+        {
+            "locations": [
+                {
+                    "display_name": "iTunes",
+                    "id": "5d8415b3ca549f00528a99f0",
+                    "url": "https://itunes.apple.com/gb/tv-season/franklin-and-the-mystery-of-the/id883648425?ct=app_tv&i=884304053",
+                    "name": "iTunesIVAGB",
+                    "icon": "https://utellyassets7.imgix.net/locations_icons/utelly/black_new/iTunesIVAGB.png?w=92&auto=compress&app_version=9b01e497-d87f-4baa-827d-15d07b444af4_1e1212w2021-10-11"
+                },
+                {
+                    "display_name": "Amazon Instant Video",
+                    "id": "5d8415b31e1521005490e1bc",
+                    "url": "https://watch.amazon.co.uk/detail?asin=B016JG0P1W&tag=utellycom00-21",
+                    "name": "AmazonInstantVideoIVAGB",
+                    "icon": "https://utellyassets7.imgix.net/locations_icons/utelly/black_new/AmazonInstantVideoIVAGB.png?w=92&auto=compress&app_version=9b01e497-d87f-4baa-827d-15d07b444af4_1e1212w2021-10-11"
+                }
+            ],
+            "weight": 8125,
+            "id": "5d9140e7302b840050acedb4",
+            "external_ids": {
+                "imdb": {
+                    "url": "https://www.imdb.com/title/tt2125149",
+                    "id": "tt2125149"
+                },
+                "tmdb": {
+                    "url": "https://www.themoviedb.org/tv/46358",
+                    "id": "46358"
+                },
+                "iva": {
+                    "id": "332280"
+                },
+                "facebook": null,
+                "rotten_tomatoes": null,
+                "wiki_data": {
+                    "url": "https://www.wikidata.org/wiki/Q547292",
+                    "id": "Q547292"
+                },
+                "iva_rating": null,
+                "gracenote": null
+            },
+            "picture": "https://utellyassets9-4.imgix.net/api/Images/37e0cf56d1f6a8f10bae12fbcdf55169/Redirect?fit=crop&auto=compress&crop=faces,top",
+            "provider": "iva",
+            "name": "Franklin and Friends"
+        }
+    ],
+    "updated": "2021-10-11T05:08:41+0100",
+    "term": "friends",
+    "status_code": 200
+}
