@@ -10,6 +10,16 @@ module.exports = {
     module: {
         rules: [
             {
+                test: /\.(js|jsx)$/,
+                exclude: /nodeModules/,
+                use: {
+                  loader: 'babel-loader',
+                  options: {
+                    presets: ['@babel/preset-env', '@babel/preset-react']
+                  }
+                }
+            },
+            {
                 test: /\.css$/,
                 use: [
                     { loader: 'style-loader' },
@@ -25,5 +35,12 @@ module.exports = {
                 ]
             }
         ]
+    },
+    devServer: {
+        static: './build',
+        hot: true,
+        port: 8080,
+        watchContentBase: true
+
     }
 }
