@@ -1,46 +1,62 @@
 const path = require('path');
+const HTMLWebpackPlugin = require('html-webpack-plugin');
 
 module.exports = {
-    entry: './client/index.js',
-    output: {
-        path: path.resolve(__dirname, 'build'),
-        filename: 'bundle.js',
-        publicPath: '/build/'
-    },
-    module: {
-        rules: [
-            {
-                test: /\.(js|jsx)$/,
-                exclude: /nodeModules/,
-                use: {
-                  loader: 'babel-loader',
-                  options: {
-                    presets: ['@babel/preset-env', '@babel/preset-react']
-                  }
-                }
-            },
-            {
-                test: /\.css$/,
-                use: [
-                    { loader: 'style-loader' },
-                    // [css-loader](/loaders/css-loader)
-                    {
-                        loader: 'css-loader',
-                        options: {
-                        modules: true
-                        }
-                    },
-                    // [sass-loader](/loaders/sass-loader)
-                    { loader: 'sass-loader' }
-                ]
+  entry: './client/index.js',
+  output: {
+      path: path.resolve(__dirname, 'build'),
+      filename: 'bundle.js',
+      publicPath: '/'
+  },
+  mode: 'development',
+  module: {
+    rules: [
+      {
+        test: /\.(js|jsx)$/,
+        exclude: /node_modules/,
+        use: {
+          loader: 'babel-loader',
+          options: {
+            presets: ['@babel/preset-env', '@babel/preset-react']
+          }
+        }
+      },
+      {
+        test: /\.css$/,
+        use: [
+          { loader: 'style-loader' },
+          // [css-loader](/loaders/css-loader)
+          {
+            loader: 'css-loader',
+            options: {
+            modules: true
             }
+          },
+          // [sass-loader](/loaders/sass-loader)
+          { loader: 'sass-loader' }
         ]
-    },
-    devServer: {
-        static: './build',
-        hot: true,
-        port: 8080,
-        watchContentBase: true
-
+      }
+    ]
+  },
+  devServer: {
+    static: './build',
+    hot: true,
+    host: 'localhost',
+    port: 8080,
+    proxy: {
+      '/': {
+        target: 'http://localhost:3000',
+        secure: false,
+        changeOrigin: false
+      }
     }
+  },
+  plugins: [
+    new HTMLWebpackPlugin({
+        template: './index.html'
+    })
+  ],
+  resolve: {
+    extensions: ['.js', '.jsx'],
+  },
 }
