@@ -39,7 +39,7 @@ module.exports = {
     ]
   },
   devServer: {
-    static: './build',
+    static: path.join(__dirname, 'build'),
     hot: true,
     host: 'localhost',
     port: 8080,
