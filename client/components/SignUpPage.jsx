@@ -19,7 +19,7 @@ const handleSubmit = (e) => {
 
 const SignUpPage = () => {
   return (
-    <div>
+    <div class="signup">
       <form onSubmit={ handleSubmit }>
         <label for='username'>
           Username: 

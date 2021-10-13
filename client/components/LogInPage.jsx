@@ -31,7 +31,7 @@ const LogInPage = () => {
     });
   }
   return (
-    <div>
+    <div class="login">
       <label htmlFor="username">
         Username:
         <input type='text' name='username' id="username" value={username} onChange={(e) => setUsername(e.target.value)}/>
