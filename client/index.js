@@ -1,13 +1,13 @@
 //Dependencies 
 import * as React from 'react';
 import { render } from 'react-dom';
-import { Router } from 'react-router';
+import { BrowserRouter } from 'react-router-dom';
 //React Component 
-import App from './app';
+import App from './app.jsx';
 
 render(
-  <Router>
+  <BrowserRouter>
       <App />
-  </Router>,
+  </BrowserRouter>,
   document.getElementById('root')
 );
