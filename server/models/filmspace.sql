@@ -1,5 +1,3 @@
-CREATE EXTENSION pgcrypto;
-
 DROP TABLE IF EXISTS users; 
 CREATE TABLE users (
   _id SERIAL PRIMARY KEY ,
