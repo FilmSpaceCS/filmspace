@@ -8,23 +8,34 @@ const hashRounds = 10;
 
 userController.signUp = (req, res, next) => {
     const { username, password } = req.body;
-    let hashedPass;
+    console.log(`THIS IS USERCONTROLLER SIGNUP: ${username}, ${password}`);
 
-    bcrypt.hash(password, saltRounds, (err, hash) => {
-        hashedPass = hash;
-    })
+    bcrypt.hash(password, hashRounds, (err, hash) => {
 
-    const queryStr = 'INSERT INTO users (username, password) VALUES ($1, $2);'
-    const params = [username, hashedPass];
+        if (err) {
+            console.log(err);
+            return next(err);
+        }
 
-    db.query(queryStr, params)
+        const hashedPass = hash;
+        console.log(hashedPass);
+
+        const queryStr = 'INSERT INTO users (username, password) VALUES ($1, $2);'
+        const params = [username, hashedPass];
+
+        db.query(queryStr, params)
         .then(data => {
             res.locals.data = data;
+            console.log('Sign-up was successful')
             return next();
         })
         .catch(error => {
+            console.log(error);
             return next(error);
         })
+    })
+
+    
 }
 
 userController.login = (req, res, next) => {
@@ -45,5 +56,7 @@ userController.login = (req, res, next) => {
             return next(error)
         })
 }
+
+console.log(userController.signUp({body: { username: 'dog', password: 'cat'}}, {locals: {}}, () => console.log('done')))
 
 module.exports = userController;

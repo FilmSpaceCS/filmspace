@@ -1,3 +1,3 @@
-const db = require('../models/filmspaceModels.js');
+const db = require('../models/filmspaceModel.js');
 
 const mediaController = {};
