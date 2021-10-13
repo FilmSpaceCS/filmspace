@@ -3,15 +3,12 @@ const userController = require('../controllers/userController.js');
 
 const router = express.Router();
 
-router.post('/signUp', (req, res, next) => {
-    console.log('USERS ROUTER SIGN UP');
-    return next();
-}, userController.signUp, (req, res) => {
-    res.send(res.locals.json());
+router.post('/signUp', userController.signUp, (req, res) => {
+    res.sendStatus(200);
 });
 
-router.post('/login', userController.login, (req, res) => {
-    res.send(res.locals.json());
+router.get('/login', userController.login, (req, res) => {
+    res.status(200).json(res.locals);
 })
 
 module.exports = router;
