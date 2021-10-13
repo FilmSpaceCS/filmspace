@@ -1,7 +1,20 @@
 import React from 'react';
+import axios from 'axios';
 
 const handleSubmit = (e) => {
   e.preventDefault();
+  console.log(e)
+  axios.post('/users/signUp', 
+      body
+    )
+    .then(response => {
+      console.log(response);
+
+    })
+    .catch(err => {
+      console.error(err);
+      
+    });
 }
 
 const SignUpPage = () => {

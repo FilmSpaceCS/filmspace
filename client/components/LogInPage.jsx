@@ -12,7 +12,7 @@ const LogInPage = () => {
       password
     };
     console.log(body)
-    axios.post('/user', 
+    axios.get('/users/login', 
       body
     )
     .then(response => {
