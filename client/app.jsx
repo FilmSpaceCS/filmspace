@@ -5,9 +5,9 @@ import MainContainer from './containers/MainContainer.jsx'
 const App = () => {
   return (
     <div>
-      {/* <Router> */}
-        <MainContainer />
-      {/* </Router> */}
+    {/* <BrowserRouter> */}
+      <MainContainer />
+    {/* </BrowserRouter> */}
    </div>
   )
 }

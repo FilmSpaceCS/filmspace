@@ -7,7 +7,7 @@ import App from './app.jsx';
 
 render(
   <BrowserRouter>
-      <App />
+    <App />
   </BrowserRouter>,
   document.getElementById('root')
 );
