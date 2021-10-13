@@ -29,11 +29,11 @@ module.exports = {
           {
             loader: 'css-loader',
             options: {
-            modules: true
+            modules: true,
             }
           },
           // [sass-loader](/loaders/sass-loader)
-          { loader: 'sass-loader' }
+          { loader: 'sass-loader' 
         ]
       }
     ]
