@@ -9,7 +9,7 @@ const MyListPage = (props) => {
   const [showCard, setShowCard] = useState([]);
 
   useEffect(() => {
-    axios('/user/getAll')
+    axios('/users/getAll')
       .then(response => {
         console.log(response);
         setDisplayName(temp);
@@ -35,7 +35,7 @@ const MyListPage = (props) => {
   return (
     <div>
       <input type='button' onClick={something} value='Home' />
-      <div>
+      <div class="show-card-container">
         { showListCards }
       </div>
     </div>

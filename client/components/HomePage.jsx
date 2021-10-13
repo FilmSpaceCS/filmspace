@@ -57,7 +57,7 @@ const HomePage = () => {
     <div>
       <input type='text' placeholder='Search Your Show' onChange={(e) => setShowName(e)}/>
       <input type='submit' value='Search' onClick={searchShows(showName)}/>
-      <div>
+      <div class="show-card-container">
         { showListCards }
       </div>
     </div>

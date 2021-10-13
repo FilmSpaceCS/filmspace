@@ -22,18 +22,18 @@ module.exports = {
         }
       },
       {
-        test: /\.css$/,
+        test: /\.s[ac]ss$/i,
         use: [
           { loader: 'style-loader' },
           // [css-loader](/loaders/css-loader)
           {
             loader: 'css-loader',
             options: {
-            modules: true
+            modules: true,
             }
           },
           // [sass-loader](/loaders/sass-loader)
-          { loader: 'sass-loader' }
+          { loader: 'sass-loader' 
         ]
       }
     ]
@@ -46,8 +46,7 @@ module.exports = {
     proxy: {
       '/': {
         target: 'http://localhost:3000',
-        secure: false,
-        changeOrigin: false
+        historyApiFallback: true,
       }
     }
   },

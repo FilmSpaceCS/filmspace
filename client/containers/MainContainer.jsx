@@ -10,13 +10,12 @@ const MainContainer = props => {
     <div>
       <Switch>
         <Route exact path="/" component={ LogInPage } /> 
-        <Route exact path="/signUpPage" component={ SignUpPage } /> 
-        <Route exact path="/homePage" component={ HomePage } />
-        <Route exact path="/myListPage" component={ MyListPage } />
+        <Route path="/signUpPage" component={ SignUpPage } /> 
+        <Route path="/homePage" component={ HomePage } />
+        <Route path="/myListPage" component={ MyListPage } />
       </Switch>
     </div>
   )
 }
 
-export default MainContainer; 
-
+export default MainContainer;
