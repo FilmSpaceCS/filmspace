@@ -1,9 +1,16 @@
 const express = require('express');
 const app = express();
+
+const users = require('./routes/users.js');
+// const media = require('./routes/media.js');
+
 const PORT = 3000;
 
 app.use(express.json());
 app.use(express.urlencoded({ extended: true }));
+
+app.use('/users', users);
+// app.use('/media', media);
 
 // error handlers
 app.use('*', (req, res) => {
