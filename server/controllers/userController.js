@@ -16,20 +16,24 @@ userController.signUp = (req, res, next) => {
         }
 
         const hashedPass = hash;
-        console.log(hashedPass);
 
-        const queryStr = 'INSERT INTO users (username, password) VALUES ($1, $2);'
+        const queryStr = 'INSERT INTO users (username, password) VALUES ($1, $2) LIMIT 1;';
         const params = [username, hashedPass];
-
+        
         db.query(queryStr, params)
-        .then(data => {
-            return next();
-        })
-        .catch(error => {
-            console.log(error);
-            return next(error);
-        })
-    })  
+            .then(data => {
+                const hash = data.rows[0].password;
+
+                bcrypt.compare(password, hash, (err, result) => {
+                    res.locals.hashResult = result;
+                    res.locals.id = data.rows[0]._id;
+                    return next();
+                });
+            })
+            .catch(error => {
+                return next(error)
+            })
+        });
 }
 
 userController.login = (req, res, next) => {
@@ -52,5 +56,29 @@ userController.login = (req, res, next) => {
             return next(error)
         })
 }
+
+// get user's saved shows and services
+userController.getUserShows = (req, res, next) => {
+
+    const { id } = res.locals;
+    const queryStr = `SELECT show.title, service.name, join_service.url, service.img FROM join_user
+        INNER JOIN join_service ON join_service._id = join_user.join_service_id
+        INNER JOIN show ON show._id = join_service.show_id
+        INNER JOIN service ON service._id = join_service.service_id
+        WHERE join_user.user_id = $1;`;
+
+    const params = [ id ];
+
+    db.query(queryStr, params)
+        .then( data => {
+            console.log('GET USER SHOWS: ', data);
+            
+            res.locals.data = data;
+            return next();
+        }).catch (err => {
+            return next(err);
+        })
+}
+
 
 module.exports = userController;
