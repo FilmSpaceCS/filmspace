@@ -10,7 +10,7 @@ router.get('/show', mediaController.getServices, (req, res) => {
 
 // add show+platform+user to DB
 router.post('/add', mediaController.addShow, (req, res) => {
-    res.status(200);
+    res.sendStatus(200);
 })
 
 module.exports = router;

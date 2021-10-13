@@ -16,8 +16,8 @@ router.get('/getAll', userController.getUserShows, (req, res) => {
     res.status(200).json(res.locals);
 });
 
-router.delete('/deleteShow', userController.deleteShow, (req, res) => {
+// router.delete('/deleteShow', userController.deleteShow, (req, res) => {
 
-})
+// })
 
 module.exports = router;
