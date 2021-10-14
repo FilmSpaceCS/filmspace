@@ -23,7 +23,8 @@ CREATE TABLE join_service (
     _id SERIAL PRIMARY KEY ,
     show_id bigint NOT NULL ,
     service_id bigint NOT NULL ,
-    url varchar NOT NULL
+    url varchar NOT NULL ,
+    UNIQUE(show_id, service_id)
 );
 
 ALTER TABLE join_service ADD CONSTRAINT "show_fk" FOREIGN KEY ("show_id") REFERENCES show("_id");
@@ -33,7 +34,8 @@ DROP TABLE IF EXISTS join_user;
 CREATE TABLE join_user (
   _id SERIAL PRIMARY KEY ,
   user_id bigint NOT NULL ,
-  join_service_id bigint NOT NULL
+  join_service_id bigint NOT NULL ,
+  UNIQUE(user_id, join_service_id)
 );
 
 ALTER TABLE join_user ADD CONSTRAINT "user_fk" FOREIGN KEY ("user_id") REFERENCES users("_id");
