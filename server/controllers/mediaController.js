@@ -1,6 +1,7 @@
 const fs = require('fs');
 const dotenv = require('dotenv');
 const axios = require("axios");
+const path = require('path');
 dotenv.config();
 
 const db = require('../models/filmspaceModel.js');
@@ -29,26 +30,31 @@ mediaController.getServices = (req, res, next) => {
     //     console.error(error);
     // });
 
-    const results = JSON.parse(fs.readFileSync(response, 'utf8'));
+    const results = JSON.parse(fs.readFileSync(path.resolve(__dirname,'../../friendsQuery.json'), 'utf8'));
+    console.log('GET SERVICES: ', results);
+    
     res.locals.locs = results.results[0].locations;
+    res.locals.name = results.results[0].name;
+
     return next();
 };
 
 // add show+platform+user to DB
 mediaController.addShow = (req, res, next) => {
-    const { user_id, show, service, url, img } = req.body;
-    const params = [user_id, show, service, url, img];
+    console.log('ADD SHOW REQ.BODY: ', req.body);
+    const { userId, show, service, url, img } = req.body;
+    const params = [userId, show, service, url, img];
 
 
-    const queryArr = [`INSERT INTO show (title) VALUES ($1) RETURNING _id;`,    // one query to insert show, returning showid
-    `INSERT INTO service (name, img) VALUES ($1, $2) RETURNING _id;`,    // one query to insert service, returning serviceid
+    const queryArr = [`INSERT INTO show (title) VALUES ($1) ON CONFLICT (title) DO UPDATE SET title = $1 RETURNING _id;`,    // one query to insert show, returning showid
+    `INSERT INTO service (name, img) VALUES ($1, $2) ON CONFLICT (name) DO UPDATE SET name = $1 RETURNING _id;`,    // one query to insert service, returning serviceid
     `INSERT INTO join_service (show_id, service_id, url) VALUES ($1, $2, $3) RETURNING _id;`,    // one query to insert join_service, returning join_serviceid
     `INSERT INTO join_user (user_id, join_service_id) VALUES ($1, $2);`    // one query to insert join_user, done
     ];
 
     db.query(queryArr[0], [params[1]]) //get the show_id
         .then( data => {
-
+            console.log('querying')
             params.push(data.rows[0]._id); // push show_id to slot #6
             db.query(queryArr[1], [params[2], params[4]]) // get service_id
 

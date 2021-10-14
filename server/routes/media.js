@@ -4,7 +4,7 @@ const mediaController = require('../controllers/mediaController.js');
 const router = express.Router();
 
 // get streaming platforms from API
-router.get('/show', mediaController.getServices, (req, res) => {
+router.post('/show', mediaController.getServices, (req, res) => {
     res.status(200).json(res.locals);
 });
 

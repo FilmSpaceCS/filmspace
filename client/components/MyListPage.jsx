@@ -1,4 +1,6 @@
-import React, { useEffect } from 'react'
+import React, { useState, useEffect } from 'react'
+import { Link } from 'react-router-dom';
+import axios from 'axios';
 //import Shows from './Shows.jsx'
 
 const MyListPage = (props) => {
@@ -7,16 +9,17 @@ const MyListPage = (props) => {
   const [url, setUrl] = useState('');
   const [icon, setIcon] = useState('');
   const [showCard, setShowCard] = useState([]);
-
+  
+  console.log('userId: ',props.location.state.userId);
   useEffect(() => {
-    axios('/users/getAll')
+    axios.post('/users/getAll', { userId: props.location.state.userId })
       .then(response => {
         console.log(response);
-        setDisplayName(temp);
-        setShowName(temp);
-        setUrl(temp);
-        setIcon(temp);
-        setShowCard([...response]);
+        // setDisplayName(temp);
+        // setShowName(temp);
+        // setUrl(temp);
+        // setIcon(temp);
+        setShowCard(response);
       })
       .catch(err => {
         console.error(err);
@@ -34,8 +37,10 @@ const MyListPage = (props) => {
   })
   return (
     <div>
-      <input type='button' onClick={something} value='Home' />
-      <div class="show-card-container">
+        <Link to="/homePage">
+          <input type='button' value='Home' />
+        </Link>      
+        <div className="show-card-container">
         { showListCards }
       </div>
     </div>

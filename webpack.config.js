@@ -23,18 +23,20 @@ module.exports = {
       },
       {
         test: /\.s[ac]ss$/i,
-        use: [
-          { loader: 'style-loader' },
-          // [css-loader](/loaders/css-loader)
-          {
-            loader: 'css-loader',
-            options: {
-            modules: true,
-            }
-          },
-          // [sass-loader](/loaders/sass-loader)
-          { loader: 'sass-loader' 
-        ]
+        exclude: /node_modules/,
+        use: ['style-loader', 'css-loader', 'sass-loader']
+        // use: [
+        //   { loader: 'style-loader' },
+        //   // [css-loader](/loaders/css-loader)
+        //   {
+        //     loader: 'css-loader',
+        //     options: {
+        //     modules: true,
+        //     }
+        //   },
+        //   // [sass-loader](/loaders/sass-loader)
+        //   { loader: 'sass-loader' } 
+        // ]
       }
     ]
   },
